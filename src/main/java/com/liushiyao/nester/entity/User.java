@@ -20,8 +20,17 @@ public class User {
  private Integer age;
  private boolean sex;
  private String device_id;
+ private String nick;
  private Date create_time;
  private Date update_time;
+
+  public String getNick() {
+    return nick;
+  }
+
+  public void setNick(String nick) {
+    this.nick = nick;
+  }
 
   public Integer getUid() {
     return uid;
