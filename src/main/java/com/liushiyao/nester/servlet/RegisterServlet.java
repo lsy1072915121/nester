@@ -18,12 +18,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
-@WebServlet(name = "regedit",urlPatterns = "/regedit")
-public class RegeditServlet extends HttpServlet
+@WebServlet(name = "register",urlPatterns = "/register")
+public class RegisterServlet extends HttpServlet
 {
 
 
-	private static final Logger logger = Logger.getLogger(RegeditServlet.class);
+	private static final Logger logger = Logger.getLogger(RegisterServlet.class);
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException
@@ -32,10 +32,17 @@ public class RegeditServlet extends HttpServlet
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		out.println("Your Reqeust Method error!!!");
+		out.println("Your Request Method error!!!");
 	}
 
 
+	/**
+	 * 注册用户，接收账号和密码
+	 * @param request
+	 * @param response
+	 * @throws ServletException
+	 * @throws IOException
+	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException
 	{
@@ -59,6 +66,7 @@ public class RegeditServlet extends HttpServlet
 				out.println(new BusiResult(BusiStatus.SUCCESS).toJson());
 			} catch (SQLException e) {
 				e.printStackTrace();
+				out.println(new BusiResult(BusiStatus.BUSIERROR).toJson());
 			}finally {
 				jdbcUtils.releaseConn();
 			}
