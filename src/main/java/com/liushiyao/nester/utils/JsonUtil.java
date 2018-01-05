@@ -3,6 +3,7 @@ package com.liushiyao.nester.utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.liushiyao.nester.common.BusiResult;
 import com.liushiyao.nester.entity.City;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -79,7 +80,10 @@ public class JsonUtil {
   @Test
   public void toJsonTest2(){
 
+    String json = "";
 
+    BusiResult busiResult = ( BusiResult ) JsonUtil.fromJson ( json, BusiResult.class );
+    System.out.println(busiResult.getCode());
   }
 
 
