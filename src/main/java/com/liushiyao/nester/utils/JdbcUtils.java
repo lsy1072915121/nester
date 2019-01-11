@@ -89,7 +89,7 @@ public class JdbcUtils {
 
 
     JdbcUtils jdbcUtils = new JdbcUtils();
-    String sql = "insert into device_info values(003,\"第三代\",\"2018年第三代产品\")";
+    String sql = "insert into user(account,passwd) values('liushiyao2','123123');";
     jdbcUtils.getConnection();
     List<Object> paras = new ArrayList<Object>();
     paras.add("002");

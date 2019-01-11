@@ -14,23 +14,15 @@ import java.sql.Date;
  */
 public class User {
 
- private Integer uid;
- private String account;
- private String passwd;
- private Integer age;
- private boolean sex;
- private String device_id;
- private String nick;
- private Date create_time;
- private Date update_time;
-
-  public String getNick() {
-    return nick;
-  }
-
-  public void setNick(String nick) {
-    this.nick = nick;
-  }
+  private Integer uid;
+  private String account;
+  private String passwd;
+  private Integer age;
+  private boolean sex;
+  private String deviceId;
+  private String nick;
+  private Date createTime;
+  private Date updateTime;
 
   public Integer getUid() {
     return uid;
@@ -72,29 +64,35 @@ public class User {
     this.sex = sex;
   }
 
-  public String getDevice_id() {
-    return device_id;
+  public String getDeviceId() {
+    return deviceId;
   }
 
-  public void setDevice_id(String device_id) {
-    this.device_id = device_id;
+  public void setDeviceId(String deviceId) {
+    this.deviceId = deviceId;
   }
 
-  public Date getCreate_time() {
-    return create_time;
+  public String getNick() {
+    return nick;
   }
 
-  public void setCreate_time(Date create_time) {
-    this.create_time = create_time;
+  public void setNick(String nick) {
+    this.nick = nick;
   }
 
-  public Date getUpdate_time() {
-    return update_time;
+  public Date getCreateTime() {
+    return createTime;
   }
 
-  public void setUpdate_time(Date update_time) {
-    this.update_time = update_time;
+  public void setCreateTime(Date createTime) {
+    this.createTime = createTime;
   }
 
+  public Date getUpdateTime() {
+    return updateTime;
+  }
 
+  public void setUpdateTime(Date updateTime) {
+    this.updateTime = updateTime;
+  }
 }

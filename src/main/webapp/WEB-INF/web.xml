@@ -9,5 +9,7 @@
     <param-name>log4jConfig</param-name>
     <param-value>/resources/log4j.properties</param-value>
   </context-param>
-
+  <welcome-file-list>
+    <welcome-file>tools.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

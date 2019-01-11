@@ -118,7 +118,7 @@ public class LoginServlet extends HttpServlet {
           case "passwd":user.setPasswd(str[1]);break;
           case "age":user.setAge(Integer.parseInt(str[1]));break;
           case "sex":user.setSex(Boolean.parseBoolean(str[1]));break;
-          case "device_id":user.setDevice_id(str[1]);break;
+          case "device_id":user.setDeviceId(str[1]);break;
           case "nick":user.setNick(str[1]);break;
           default:break;
         }
